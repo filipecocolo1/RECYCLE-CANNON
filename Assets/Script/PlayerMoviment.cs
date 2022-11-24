@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour
 {
+    public GameObject shoot;
     public float _Speed;
     Rigidbody rb;
+    public Transform Guntip;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +27,14 @@ public class PlayerMoviment : MonoBehaviour
         rb.velocity = Position * _Speed;
 
     }
+    private void Atirar()
+    {
+
+        Instantiate(shoot, Guntip.position, transform.rotation);
+
+    }
 }
+
+
+
 
