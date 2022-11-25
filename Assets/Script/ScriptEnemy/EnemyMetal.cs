@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyMetal : MonoBehaviour
 {
     [SerializeField] private int vidas = 1;
     
@@ -24,26 +24,6 @@ public class Enemy : MonoBehaviour
             Destroy(outro.gameObject);
             vidas = vidas - 1;
             if (vidas == 0)
-            {
-                Destroy(this.gameObject);
-            }
-        }
-        if (outro.gameObject.tag == "PowerPlastic")
-        {
-            Destroy(outro.gameObject);
-            vidas = vidas - 1;
-            if (vidas == 0)
-
-            {
-                Destroy(this.gameObject);
-            }
-        }
-        if (outro.gameObject.tag == "PowerOrganic")
-        {
-            Destroy(outro.gameObject);
-            vidas = vidas - 1;
-            if (vidas == 0)
-
             {
                 Destroy(this.gameObject);
             }

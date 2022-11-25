@@ -11,6 +11,7 @@ public class PlayerMoviment : MonoBehaviour
     Rigidbody rb;
     public int vidas = 3;
     public Transform Guntip;
+    public FixedJoystick moveJoystick;
 
 
     // Start is called before the first frame update
@@ -18,7 +19,11 @@ public class PlayerMoviment : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
- 
+    public void Update()
+    {
+       
+    }
+
     private void FixedUpdate()
     {
         Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
@@ -54,6 +59,7 @@ public class PlayerMoviment : MonoBehaviour
     }
 
 
+   
 }
 
 
