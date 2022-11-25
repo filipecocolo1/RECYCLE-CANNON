@@ -9,6 +9,7 @@ public class PlayerMoviment : MonoBehaviour
     public GameObject Organic;
     public float _Speed;
     Rigidbody rb;
+    public int vidas = 3;
     public Transform Guntip;
 
 
@@ -17,12 +18,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+ 
     private void FixedUpdate()
     {
         Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
@@ -31,24 +27,31 @@ public class PlayerMoviment : MonoBehaviour
     }
     public void PowerPlastic()
     {
-
         Instantiate(Plastic, Guntip.position, transform.rotation);
-
     }
     public void PowerMetal()
     {
-
         Instantiate(Metal, Guntip.position, transform.rotation);
-
     }
 
     public void PowerOrganic()
     {
-
         Instantiate(Organic, Guntip.position, transform.rotation);
-
     }
-
+    
+    
+    void OnCollisionEnter(Collision outro)
+    {
+        if (outro.gameObject.tag == "Inimigo")
+        {
+            Destroy(outro.gameObject);
+            vidas = vidas - 1;
+            if (vidas == 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
 
 
 }

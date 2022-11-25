@@ -27,7 +27,7 @@ public class DestroyGameObject : MonoBehaviour
             Destroy(outro.gameObject);
         }
 
-        if (outro.gameObject.tag == "PowerMetal")
+        if (outro.gameObject.tag == "PowerOrganic")
         {
             Destroy(outro.gameObject);
         }

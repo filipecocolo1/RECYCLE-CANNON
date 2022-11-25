@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int vidas = 1;
-    // Start is called before the first frame update
+    
     void Start()
     {
         transform.tag = "Inimigo";
@@ -20,51 +20,32 @@ public class Enemy : MonoBehaviour
     {
 
         if (outro.gameObject.tag == "PowerMetal")
-
         {
-
             Destroy(outro.gameObject);
             vidas = vidas - 1;
-
-
             if (vidas == 0)
-
             {
                 Destroy(this.gameObject);
-
-
             }
         }
         if (outro.gameObject.tag == "PowerPlastic")
-
         {
-
             Destroy(outro.gameObject);
             vidas = vidas - 1;
-
-
             if (vidas == 0)
 
             {
                 Destroy(this.gameObject);
-
-
             }
         }
         if (outro.gameObject.tag == "PowerOrganic")
-
         {
-
             Destroy(outro.gameObject);
             vidas = vidas - 1;
-
-
             if (vidas == 0)
 
             {
                 Destroy(this.gameObject);
-
-
             }
         }
     }

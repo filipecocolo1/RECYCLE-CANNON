@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 1871309995713371029}
   - component: {fileID: 1871309995713371030}
   - component: {fileID: 1871309995713371026}
+  - component: {fileID: 6899144131243218505}
   - component: {fileID: 1871309995713371027}
   - component: {fileID: 1871309995713371025}
   - component: {fileID: 3472408690769436858}
-  - component: {fileID: 6899144131243218505}
+  - component: {fileID: 2207817981423104167}
   m_Layer: 0
   m_Name: EnemyMetal
-  m_TagString: PowerMetal
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +101,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634071f924e36c849a13c0137e442b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6899144131243218505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871309995713371032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4176af88e058c044c9e8eb209bd44146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidas: 1
 --- !u!195 &1871309995713371027
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -149,18 +163,18 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.41592848
-  m_Center: {x: -1.6921087e-10, y: 0, z: -0.08407152}
---- !u!114 &6899144131243218505
-MonoBehaviour:
+  m_Radius: 0.90326345
+  m_Center: {x: -1.6921087e-10, y: 0.48733485, z: -0.08407152}
+--- !u!65 &2207817981423104167
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871309995713371032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4176af88e058c044c9e8eb209bd44146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidas: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
