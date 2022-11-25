@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour
 {
-    public GameObject shoot;
+    public GameObject Plastic;
+    public GameObject Metal;
+    public GameObject Organic;
     public float _Speed;
     Rigidbody rb;
     public Transform Guntip;
@@ -27,12 +29,28 @@ public class PlayerMoviment : MonoBehaviour
         rb.velocity = Position * _Speed;
 
     }
-    private void Atirar()
+    public void PowerPlastic()
     {
 
-        Instantiate(shoot, Guntip.position, transform.rotation);
+        Instantiate(Plastic, Guntip.position, transform.rotation);
 
     }
+    public void PowerMetal()
+    {
+
+        Instantiate(Metal, Guntip.position, transform.rotation);
+
+    }
+
+    public void PowerOrganic()
+    {
+
+        Instantiate(Organic, Guntip.position, transform.rotation);
+
+    }
+
+
+
 }
 
 

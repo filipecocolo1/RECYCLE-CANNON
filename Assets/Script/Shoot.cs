@@ -9,17 +9,14 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, -speed);    
+        rb.velocity = new Vector3(-speed, rb.velocity.y, rb.velocity.z);
 
     }
     // Update is called once per frame
     void Update()
     {
-    
-    }
-    //private void OnBecameInvisible()
-    //{
-    //    //Destroy(gameObject);
-    //}
 
+    }
+
+   
 }

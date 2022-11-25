@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 1871309995713371026}
   - component: {fileID: 1871309995713371027}
   - component: {fileID: 1871309995713371025}
-  - component: {fileID: 6899144131243218505}
   - component: {fileID: 3472408690769436858}
+  - component: {fileID: 6899144131243218505}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
+  m_Name: EnemyMetal
+  m_TagString: PowerMetal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 421ab0c79d73bcc40aa7c35801815c22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,18 +138,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6899144131243218505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871309995713371032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4176af88e058c044c9e8eb209bd44146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &3472408690769436858
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -163,3 +151,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.41592848
   m_Center: {x: -1.6921087e-10, y: 0, z: -0.08407152}
+--- !u!114 &6899144131243218505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871309995713371032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4176af88e058c044c9e8eb209bd44146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidas: 1
