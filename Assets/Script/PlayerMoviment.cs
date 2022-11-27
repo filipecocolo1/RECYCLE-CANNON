@@ -11,7 +11,7 @@ public class PlayerMoviment : MonoBehaviour
     Rigidbody rb;
     public int vidas = 3;
     public Transform Guntip;
-    public FixedJoystick moveJoystick;
+    public FixedJoystick fixedJoystick;
 
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class PlayerMoviment : MonoBehaviour
     }
     public void Update()
     {
-       
+        Joystick();
     }
 
     private void FixedUpdate()
@@ -58,8 +58,13 @@ public class PlayerMoviment : MonoBehaviour
         }
     }
 
+    public void Joystick()
+    {
+        float h = fixedJoystick.Horizontal * _Speed * Time.deltaTime;//controla a movimentação do player
+        float v = fixedJoystick.Vertical * _Speed * Time.deltaTime;
+        transform.Translate(v,0,-h);
+    }
 
-   
 }
 
 

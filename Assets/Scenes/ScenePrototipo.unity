@@ -2859,7 +2859,7 @@ MonoBehaviour:
   _Speed: 5
   vidas: 3
   Guntip: {fileID: 511355887}
-  moveJoystick: {fileID: 1571864857}
+  fixedJoystick: {fileID: 1571864857}
 --- !u!136 &1794789027
 CapsuleCollider:
   m_ObjectHideFlags: 0
