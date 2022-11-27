@@ -2898,7 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8143b5cd6680a43aa6d06216354ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Speed: 0
+  _Speed: 5
   moveV: 0
   moveH: 0
   moveJoystick: {fileID: 1571864857}
