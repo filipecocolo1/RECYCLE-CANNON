@@ -33,7 +33,7 @@ public class LifeBase : MonoBehaviour
             {
                 Destroy(this.gameObject);
 
-               
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }

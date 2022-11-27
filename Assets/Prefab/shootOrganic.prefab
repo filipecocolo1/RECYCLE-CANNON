@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8875618770682008008}
   m_Layer: 0
   m_Name: shoot (1)
-  m_TagString: PowerMetal
+  m_TagString: PowerOrganic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 6704631534655702816}
   m_Layer: 0
   m_Name: shoot
-  m_TagString: PowerMetal
+  m_TagString: PowerOrganic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

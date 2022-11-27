@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMoviment : MonoBehaviour
 {
@@ -22,8 +23,23 @@ public class PlayerMoviment : MonoBehaviour
     public void Update()
     {
         Joystick();
-    }
 
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Instantiate(Plastic, Guntip.position, transform.rotation);
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Instantiate(Metal, Guntip.position, transform.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Instantiate(Organic, Guntip.position, transform.rotation);
+        }
+
+
+    }
     private void FixedUpdate()
     {
         Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
@@ -54,6 +70,8 @@ public class PlayerMoviment : MonoBehaviour
             if (vidas == 0)
             {
                 Destroy(this.gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
             }
         }
     }
