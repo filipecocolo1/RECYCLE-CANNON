@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class MovimentJoystick : MonoBehaviour
 {
-    private float _Speed = 5, moveV, moveH;
+    private float _Speed , moveV, moveH;
     public FixedJoystick moveJoystick;
     Rigidbody rb;
     // Start is called before the first frame update
@@ -15,24 +15,26 @@ public class MovimentJoystick : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         MovementPlayer();
-
+      
     }
     public void MovementPlayer()
     {
 
-        moveH = moveJoystick.Horizontal;
-        moveV = moveJoystick.Vertical;
-        
+        moveV = moveJoystick.Horizontal;
+        moveH = moveJoystick.Vertical;
+
+        Vector3 Position = new Vector3(moveH, 0, moveV);
         rb.velocity = new Vector3(moveH * _Speed, rb.velocity.y, moveV * _Speed);
-       
-        Vector3 dir = new Vector3(moveH, 0, moveV);
-        
-        if (dir != Vector3.zero)
+        if (Position != Vector3.zero)
         {
-            transform.LookAt(transform.position + dir);
+
+
+            transform.LookAt(transform.position + Position);
+
+
         }
 
     }
